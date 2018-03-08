@@ -91,24 +91,6 @@ function init() {
 	document.addEventListener( 'keyup', onKeyUp, false );
 	raycaster = new THREE.Raycaster( new THREE.Vector3(), new THREE.Vector3( 0, - 1, 0 ), 0, 10 );
 	
-	// floor
-	geometry = new THREE.PlaneGeometry( 2000, 2000, 100, 100 );
-	geometry.rotateX( - Math.PI / 2 );
-	for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
-		var vertex = geometry.vertices[ i ];
-		vertex.x += Math.random() * 20 - 10;
-		vertex.y += Math.random() * 2;
-		vertex.z += Math.random() * 20 - 10;
-	}
-	for ( var i = 0, l = geometry.faces.length; i < l; i ++ ) {
-		var face = geometry.faces[ i ];
-		face.vertexColors[ 0 ] = new THREE.Color().setHSL( Math.random() * 0.3 + 0.5, 0.75, Math.random() * 0.25 + 0.75 );
-		face.vertexColors[ 1 ] = new THREE.Color().setHSL( Math.random() * 0.3 + 0.5, 0.75, Math.random() * 0.25 + 0.75 );
-		face.vertexColors[ 2 ] = new THREE.Color().setHSL( Math.random() * 0.3 + 0.5, 0.75, Math.random() * 0.25 + 0.75 );
-	}
-	material = new THREE.MeshBasicMaterial( { vertexColors: THREE.VertexColors } );
-	mesh = new THREE.Mesh( geometry, material );
-	scene.add( mesh );
 	
 	// objects
 	
@@ -171,7 +153,7 @@ function init() {
 	});
 	
 	// City models //
-	
+	/*
 	var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.setBaseUrl( 'City/' );
 	mtlLoader.setPath( 'City/' );
@@ -186,7 +168,7 @@ function init() {
 		}, onProgress, onError );
 		
 	});
-	
+	*/
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setClearColor( 0xffffff );
