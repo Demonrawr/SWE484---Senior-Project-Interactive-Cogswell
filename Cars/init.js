@@ -171,7 +171,7 @@ function init() {
 	});
 	
 	// City models //
-	/*
+	
 	var mtlLoader = new THREE.MTLLoader();
 	mtlLoader.setBaseUrl( 'City/' );
 	mtlLoader.setPath( 'City/' );
@@ -186,7 +186,7 @@ function init() {
 		}, onProgress, onError );
 		
 	});
-	*/
+	
 
 	renderer = new THREE.WebGLRenderer();
 	renderer.setClearColor( 0xffffff );
