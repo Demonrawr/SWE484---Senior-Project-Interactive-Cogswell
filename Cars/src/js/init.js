@@ -22,6 +22,7 @@ function init() {
 				break;
 			case 87: // w
 				moveForward = true;
+				play(stepsAudio);
 				break;
 			case 65: // a
 				moveLeft = true; 
@@ -57,6 +58,7 @@ function init() {
 				rotate = false;
 				break;
 			case 87: // w
+				stop(stepsAudio);
 				moveForward = false;
 				break;
 			case 65: // a
